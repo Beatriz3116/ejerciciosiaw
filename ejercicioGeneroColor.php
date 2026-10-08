@@ -42,16 +42,18 @@ $alumnos = [
             <?php
             $genero = null;
             foreach($alumnos as $indice =>  $alumnoGenero) {
-                if($alumnoGenero[1] == 'm') {
-                    $colorFila = "background-color: lightgreen;";
+                $edad = $alumnoGenero[2];
+                if($edad %2 == 0) {
+                    $colorEdad = "color: blue;"; //par en azul
                 } else {
-                    $colorFila = "background-color: lightblue;";
+                    $colorEdad = "color: green;"; //impar en verde
                 }
             ?>
-                <tr style="<?= $colorFila ?>">
+                <tr>
                     <td><?= $indice ?></td>
                     <td><?= $alumnoGenero[0] ?></td>
                     <td><?= $alumnoGenero[1] ?></td>
+                    <td style="<?= $colorEdad ?>"><?= $edad ?></td>
                 </tr>
             <?php
             }
