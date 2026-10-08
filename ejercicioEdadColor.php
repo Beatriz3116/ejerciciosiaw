@@ -31,14 +31,12 @@ $alumnos = [
     </head>
     <body>
         <h1>Ejercicio Género y Color</h1>
-
         <table border = "1px">
             <tr>
                 <td>#</td>
                 <td>Alumno</td>
                 <td>Género</td>
             </tr>
-
             <?php
             $genero = null;
             foreach($alumnos as $indice =>  $alumnoGenero) {
